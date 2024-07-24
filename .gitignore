@@ -1,5 +1,5 @@
 node_modules
 /.cache
-/public/_dev
+/build/
 .env
 package-lock.json

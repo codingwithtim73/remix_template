@@ -3,7 +3,7 @@ import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
 export const links = () => {
   return [
     { rel: "icon", href: "/favicon.ico" },
-    { rel: "stylesheet", href: "./app/styles/global.css" },
+    { rel: "stylesheet", href: "/styles/global.css" },
   ];
 };
 
