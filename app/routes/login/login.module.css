@@ -1,0 +1,115 @@
+/* login.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //height: 100vh;
+  border: 2px solid #ccc; /* Add a border */
+  border-radius: 15px; /* Make the border rounded */
+  padding: 20px;
+  background-color: transparent; /* Remove background color */
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.loginOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  padding: 10px 70px;
+  color: #fff; /* Default text color */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.loginButton img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Specific styles for each provider */
+.google {
+  background-color: #db4437;
+  color: #ffffff;
+}
+
+.google:hover {
+  background-color: #c33d2e;
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: #ffffff;
+}
+
+.facebook:hover {
+  background-color: #334d84;
+}
+
+.apple {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.apple:hover {
+  background-color: #333333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: #ffffff;
+}
+
+.linkedin:hover {
+  background-color: #005f8d;
+}
+
+.github {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.github:hover {
+  background-color: #222222;
+}
+
+.discord {
+  background-color: #7289da;
+  color: #ffffff;
+}
+
+.discord:hover {
+  background-color: #5a6fa2;
+}
+
+/* Error message styles */
+.error {
+  color: #ff0000;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+  .loginButton {
+    padding: 15px 5px;
+  }
+}

@@ -1,0 +1,26 @@
+/* searchbar.module.css */
+
+.searchBarContainer {
+  flex-grow: 1;
+  display: flex;
+  /* justify-content: center; */
+  padding-left: 2rem;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .searchBarContainer {
+    width: 80%;
+    padding-left: 0px !important;
+    padding-bottom: 1rem;
+  }
+}

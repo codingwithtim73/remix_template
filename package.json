@@ -1,7 +1,7 @@
 {
-  "name": "remix_template",
+  "name": "test-blog",
   "version": "1.0.0",
-  "description": "A basic remix application with an express server",
+  "description": "A test site that creates a blog using remix express and mo",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -18,12 +18,25 @@
     "@remix-run/react": "^2.10.2",
     "@remix-run/serve": "^2.10.2",
     "compression": "^1.7.4",
+    "connect-mongo": "^5.1.0",
     "cross-env": "^7.0.3",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "isbot": "^4.4.0",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
     "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-apple": "^2.0.2",
+    "passport-discord": "^0.1.4",
+    "passport-facebook": "^3.0.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-linkedin-oauth2": "^2.0.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "util": "^0.12.5",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.10.2",

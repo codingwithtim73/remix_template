@@ -1,0 +1,278 @@
+/* header.module.css */
+
+/* New theme styles for the header */
+.header {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.header nav a:hover {
+  color: #999;
+}
+
+/* Existing styles */
+.navcontainer {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo img {
+  height: 60px; /* Default size */
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.navMenuContainer {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+}
+
+.navMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.navMenu li {
+  margin-left: 1rem;
+}
+
+.navMenu li a {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+/* New styles for login section */
+/*.loginContainer {
+  display: flex;
+  align-items: center;
+}
+
+.loginContainer a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center; 
+}
+
+.loginContainer a:hover {
+  color: #007bff;
+} */
+
+.loginButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff !important;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.loginButton:hover {
+  background-color: #999;
+}
+
+.loginButton.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center; /* Center align items on mobile */
+  }
+
+  .menuButton {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .menuButton.active {
+    color: red;
+  }
+
+  .navMenuContainer {
+    display: none; /* Hide the menu initially */
+    width: 100%;
+    flex-direction: column;
+    align-items: center; /* Center align items on mobile */
+  }
+
+  .navMenuContainer.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    width: 100%;
+    align-items: center; /* Center align items on mobile */
+  }
+
+  .navMenu li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navMenu li a {
+    justify-content: center; /* Center align text */
+    margin-left: 0;
+  }
+
+  .loginContainer {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center; /* Center align items on mobile */
+  }
+
+  .loginContainer a,
+  .loginButton {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center align text */
+  }
+
+  .loginButton.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .logo img {
+    height: 30px; /* Smaller size for mobile */
+  }
+}
+
+/* Hide the hamburger menu button on larger screens */
+@media (min-width: 601px) {
+  .menuButton {
+    display: none;
+  }
+}
+.avatarContainer {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.avatarContainer:hover .dropdownMenu,
+.avatarContainer:focus-within .dropdownMenu {
+  display: block;
+}
+
+.dropdownItem {
+  margin-left: 0 !important;
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdownItem:hover {
+  background-color: #f1f1f1;
+}
+/* Mobile-specific styles */
+.mobileOnly {
+  display: none;
+}
+
+.desktopOnly {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .mobileOnly {
+    display: block;
+  }
+  .loginButton {
+    margin-left: 0 !important;
+  }
+  .loginContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  /* .searchBarContainer {
+    width: 100%;
+    padding-right: 2rem;
+  } */
+  .navMenuContainer {
+    padding-top: 1rem;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+}

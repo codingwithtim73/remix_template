@@ -1,0 +1,97 @@
+.account {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f1f1f1;
+  color: #999;
+  transition: transform 0.3s ease;
+  transform: translateX(0); /* Default for desktop */
+  position: absolute; /* Make it relative to the .account div */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1; /* Ensure it stays below the header */
+}
+
+.sidebar.closed {
+  transform: translateX(-250px); /* Hidden */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Visible */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 1rem;
+}
+
+.sidebar nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 1rem;
+  cursor: pointer;
+  position: absolute; /* Position relative to the sidebar */
+  top: 1rem;
+  left: 250px; /* Default for desktop */
+  z-index: 2; /* Ensure it stays above the sidebar */
+  transition: left 0.3s ease;
+}
+
+/* .content {
+  flex: 1;
+  padding: 1rem;
+  transition: margin-left 0.3s ease;
+  margin-left: 250px; 
+}*/
+.page {
+  flex-basis: 100%;
+  display: flex;
+  padding: 1rem 3rem;
+  transition: margin-left 1s;
+}
+.page_with_navbar {
+  margin-left: 15%;
+}
+/* Responsive styles */
+@media (max-width: 600px) {
+  .page_with_navbar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sidebar {
+    transform: translateX(-250px); /* Hidden by default on mobile */
+    position: fixed; /* Make it fixed to overlay on mobile */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Shown when open on mobile */
+  }
+
+  .content {
+    margin-left: 0; /* No margin on mobile */
+  }
+
+  .menuButton {
+    left: 1rem; /* Adjusted for mobile view */
+  }
+}

@@ -1,0 +1,25 @@
+/* MobileApp.module.css */
+
+/* Hide MobileApp on desktop */
+@media (min-width: 601px) {
+  .mobileApp {
+    display: none;
+  }
+}
+
+/* Show MobileApp on mobile */
+@media (max-width: 600px) {
+  .mobileApp {
+    display: block;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
+}
+
+.mobileApp p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
