@@ -1,16 +1,11 @@
 import { Link } from "@remix-run/react";
 import styles from "./about.module.css";
-
 export const meta = () => {
   return [
-    { title: "Our Remix App About Page" },
-    {
-      name: "description",
-      content: "This is the about us page of our Remix app.",
-    },
+    { title: "Our About Page" },
+    { name: "description", content: "Welcome the About Us Page!  " },
   ];
 };
-
 export default function About() {
   return (
     <div className={styles.container}>
